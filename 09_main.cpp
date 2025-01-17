@@ -1,0 +1,20 @@
+#include <cstdio>
+#include <iostream>
+#include <cmath>
+#include <cstring>
+#include <string>
+#include <vector>
+#include <algorithm>
+#include <map>
+#include <set>
+#include <queue>
+#include <stack>
+#include <list>
+#include <deque>
+#include <bitset>
+#include <cctype>
+#include <climits>
+#include <utility>
+#include <functional>
+#include <numeric>
+// some major kind of header files are listed
