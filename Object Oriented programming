@@ -1,0 +1,43 @@
+Object-Oriented Programming (OOP) is a programming paradigm that uses "objects" to design applications and computer programs. It utilizes several key concepts:
+
+Class: A blueprint for creating objects. It defines a datatype by bundling data and methods that work on the data into one single unit.
+
+Object: An instance of a class. It is a basic unit of Object-Oriented Programming and represents real-life entities.
+
+Encapsulation: The concept of wrapping data (variables) and methods (functions) together as a single unit. It restricts direct access to some of an object's components, which can prevent the accidental modification of data.
+
+Inheritance: A mechanism where a new class inherits properties and behavior (methods) from an existing class. It promotes code reusability.
+
+Polymorphism: The ability of different classes to be treated as instances of the same class through inheritance. It allows methods to do different things based on the object it is acting upon, even though they share the same name.
+
+Abstraction: The concept of hiding the complex implementation details and showing only the necessary features of an object. It helps in reducing programming complexity and effort.
+
+Here is a simple example in Python to illustrate these concepts:
+
+class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def speak(self):
+        raise NotImplementedError("Subclass must implement abstract method")
+
+class Dog(Animal):
+    def speak(self):
+        return f"{self.name} says Woof!"
+
+class Cat(Animal):
+    def speak(self):
+        return f"{self.name} says Meow!"
+
+# Creating objects
+dog = Dog("Buddy")
+cat = Cat("Whiskers")
+
+print(dog.speak())  # Output: Buddy says Woof!
+print(cat.speak())  # Output: Whiskers says Meow!
+
+Animal is a class.
+Dog and Cat are subclasses that inherit from Animal.
+speak method demonstrates polymorphism.
+The __init__ method and speak method in Animal demonstrate encapsulation.
+The speak method in Animal is an abstract method, demonstrating abstraction.
