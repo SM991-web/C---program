@@ -9,30 +9,49 @@ class Student{
     int Total(void);
 
     public:
-    void set_data(int rollno, char _name[20], int _marks[3]){
-        rollno = roll_no;
-        for(int i=0; i<20; i++){
-            _name[i] = name[i];
-        }
-        for(int i=0; i<3; i++){
-            _marks[i] = marks[i];
-        }
-    }
-    void display_data(){
-        cout<<"Roll No: "<<roll_no<<endl;
-        cout<<"Name: "<<name<<endl;
-        cout<<"Marks: ";
-        for(int i=0; i<3; i++){
-            cout<<marks[i]<<" ";
-        }
-        cout<<endl;
-        cout<<"Total: "<<Total()<<endl;
-    }
+    inline int set_data(int r, const char n[], int m[]);
+    void display_data();
 };
+inline int Student::set_data(int r, const char n[], int m[]){
+    roll_no = r;
+    for (int i=0;i<20;i++){
+        name[i]=n[i];
+        if (name[i]=='\0'){
+            break;
+        }
+        for (int i=0; i<3;i++){
+            marks[i]=m[i];
+        }
+    }
+    return 0;
+    
+}
+int Student::Total(){
+    int sum=0;
+    for (int i=0;i<3;i++){
+        sum+=marks[i];
+    }
+    return sum;
+}
+void Student::display_data(){
+    cout<<"roll no:"<<roll_no<<endl;
+    cout<<"Name:"<<name<<endl;
+    for (int i=0;i<3;i++){
+        cout<<"Marks in subject "<<i+1<<":"<<marks[i]<<endl;
+    }
+    cout<<"Total:"<<Total()<<endl;
+    
+}
+
 
 int main(){
     Student s;
-    s.set_data(1, "John", {90, 80, 70});
+    int marks_arr[]={90, 80, 70};
+    s.set_data(1, "John", marks_arr);
     s.display_data();
+    Student s2;
+    int marks_arr2[]={85, 75, 65};
+    s2.set_data(2, "Jane", marks_arr2);
+    s2.display_data();
     return 0;
 }
