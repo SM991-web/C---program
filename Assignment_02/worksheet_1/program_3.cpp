@@ -14,7 +14,7 @@ class Derived:public Base{
     void show()
     {cout<<"This is derived Class\n";}
 };
-int main1()
+int main()
 {
     Base b;
     Derived d;
