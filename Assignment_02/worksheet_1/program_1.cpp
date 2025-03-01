@@ -27,11 +27,12 @@ int main()
     Base b;
     Derived d;
     Base *bptr;
-
+    Derived *dptr;
+    
     bptr = &b;
     bptr->print();
 
-    bptr = &d;
+    dptr = &d;
     bptr->print();
     
     return 0;
