@@ -11,8 +11,8 @@ using namespace std;
 class Base
 {
     public:
-    virtual void print()
-    {cout<<"This is a base class\n";}
+    virtual void print()=0;
+    // {cout<<"This is a base class\n";}
 };
 class Derived:public Base{
 
@@ -26,12 +26,12 @@ int main()
     Base b;
     Derived d;
     Base *bptr;
+    Derived *dptr;
 
     bptr = &b;
     bptr->print();
 
-    bptr = &d;
-    bptr->print();
+     d.print();;
     
     return 0;
 }
