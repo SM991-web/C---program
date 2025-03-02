@@ -23,7 +23,6 @@ class Derived:public Base{
 
 int main()
 {
-    Base b;
     Derived d;
     Base *bptr;
     Derived *dptr;
