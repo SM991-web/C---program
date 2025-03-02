@@ -37,27 +37,4 @@ int main()
 }
 
 
-#include<iostream>
-using namespace std;
 
-class Base
-{
-    public:
-    virtual void print()=0;
-};
-class Derived:public Base{
-
-    public:
-    void print()
-    {cout<<"This is derived Class\n";}
-};
-
-int main()
-{
-    Derived d;
-    Base *bptr=&d;
-    bptr->print();
-
-    
-    return 0;
-}
