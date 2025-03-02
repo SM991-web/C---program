@@ -30,7 +30,8 @@ int main()
     bptr = &b;
     bptr->print();
 
-     d.print();;
+     dptr=&d;
+    dptr->print();
     
     return 0;
 }
