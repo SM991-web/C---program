@@ -28,7 +28,7 @@ int main()
     Base *bptr;
     Derived *dptr;
 
-    bptr = &b;
+    bptr = &d;
     bptr->print();
 
      dptr=&d;
