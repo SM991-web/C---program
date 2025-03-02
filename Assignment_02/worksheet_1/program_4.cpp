@@ -23,6 +23,7 @@ class Derived:public Base{
 
 int main()
 {
+    //Base b; will give error 
     Derived d;
     Base *bptr;
     Derived *dptr;
