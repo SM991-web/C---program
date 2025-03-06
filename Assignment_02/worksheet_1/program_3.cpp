@@ -8,13 +8,13 @@ class Base
     virtual void show()
     {cout<<"This is a base class\n";}
 };
-class Derived:public Base{
+class Derived:public Base{                      //Function overridding
 
     public:
     void show()
     {cout<<"This is derived Class\n";}
 };
-int main1()
+int main()
 {
     Base b;
     Derived d;
@@ -33,7 +33,7 @@ class Demo{
     int img;
 
     public:
-    Demo() : real(0), img(0) {}
+    Demo() : real(0), img(0) {}            //Function overloading
     
     Demo(int r,int i):real(r),img(i){}
 

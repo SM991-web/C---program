@@ -22,18 +22,22 @@ class Derived:public Base{
     {cout<<"This is derived Class\n";}
 };
 
-int main()
-{
+int main() {
     Base b;
     Derived d;
-    Base *bptr;
+    
+    Base* bptr;
+    Derived* dptr;
 
     bptr = &b;
     bptr->print();
 
+    dptr = &d;
+    dptr->print();
+
     bptr = &d;
     bptr->print();
-    
+
     return 0;
 }
 

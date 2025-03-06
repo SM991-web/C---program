@@ -11,8 +11,8 @@ using namespace std;
 class Base
 {
     public:
-    virtual void print()
-    {cout<<"This is a base class\n";}
+    virtual void print()=0;
+    // {cout<<"This is a base class\n";}
 };
 class Derived:public Base{
 
@@ -23,41 +23,19 @@ class Derived:public Base{
 
 int main()
 {
-    Base b;
+    //Base b; will give error 
     Derived d;
     Base *bptr;
-
-    bptr = &b;
-    bptr->print();
+    Derived *dptr;
 
     bptr = &d;
     bptr->print();
+
+     dptr=&d;
+    dptr->print();
     
     return 0;
 }
 
 
-#include<iostream>
-using namespace std;
 
-class Base
-{
-    public:
-    virtual void print()=0;
-};
-class Derived:public Base{
-
-    public:
-    void print()
-    {cout<<"This is derived Class\n";}
-};
-
-int main()
-{
-    Derived d;
-    Base *bptr=&d;
-    bptr->print();
-
-    
-    return 0;
-}

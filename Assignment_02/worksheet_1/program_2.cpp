@@ -6,7 +6,7 @@ using namespace std;
 class Base
 {
     public:
-    void virtual show()
+    virtual void  show()
     {cout<<"This is a base class\n";}
 };
 class Derived:public Base{
