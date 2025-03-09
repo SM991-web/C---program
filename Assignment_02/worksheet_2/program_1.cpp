@@ -42,7 +42,7 @@ int main(){
     d1.show();
     d2.get();
     d2.show();
-    Demo result = d1.operator-(d2); 
+    Demo result = operator-(d1); 
     cout<<"Two complex numbers subtraction is : ";
     result.show();
 
