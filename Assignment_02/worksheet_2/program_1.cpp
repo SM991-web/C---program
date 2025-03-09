@@ -26,14 +26,16 @@ class Demo{
         real=r;
         img=i;
     }
-    Demo operator-(const Demo& obj) {
-        return Demo(real - obj.real, img - obj.img);
-    }
     void show(){
         cout<<real<<"-"<<img<<"i"<<endl;
     }
-
+   friend Demo operator-(const Demo& obj);
 };
+
+// Friend function definition
+Demo operator-(const Demo& obj) {
+    return Demo(-obj.real, -obj.img);
+}
 int main(){
     Demo d1,d2;
     d1.get();
