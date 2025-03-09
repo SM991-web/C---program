@@ -37,11 +37,9 @@ Demo operator-(const Demo& obj) {
     return Demo(-obj.real, -obj.img);
 }
 int main(){
-    Demo d1,d2;
+    Demo d1;
     d1.get();
     d1.show();
-    d2.get();
-    d2.show();
     Demo result = operator-(d1); 
     cout<<"Two complex numbers subtraction is : ";
     result.show();
